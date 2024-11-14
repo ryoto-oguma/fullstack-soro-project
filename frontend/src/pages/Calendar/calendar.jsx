@@ -2,34 +2,24 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./style/Calendar.css";
+import Header from "../../components/Header/Header";
+import styled from "styled-components";
 
 function Calendar() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Frame>
+        <Header />
+      </Frame>
     </>
   );
 }
+
+const Frame = styled.div`
+  border: 2px solid #000000;
+  width: min(95vw, 95vh * 0.75);
+  height: min(95vh, 95vw / 0.75);
+  overflow: hidden;
+`;
 
 export default Calendar;
