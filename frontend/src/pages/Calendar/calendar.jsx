@@ -1,15 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./style/Calendar.css";
-import Header from "../../components/Header/Header";
 import styled from "styled-components";
+import Header from "../../components/Header/Header";
+import CalendarBody from "../../components/CalendarBody/CalendarBody";
 
 function Calendar() {
   return (
     <>
       <Frame>
         <Header />
+        <CalendarBody />
       </Frame>
     </>
   );
