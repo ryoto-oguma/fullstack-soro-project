@@ -10,6 +10,9 @@ import {
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 const theme = createTheme({
+  typography: {
+    fontFamily: "Raleway, Arial",
+  },
   palette: {
     mode: "light",
     primary: {
@@ -23,6 +26,9 @@ const theme = createTheme({
       light: "#daab7b",
       dark: "#876038",
       contrastText: "rgba(2,2,2,0.87)",
+    },
+    background: {
+      main: "#ffffff",
     },
   },
 });

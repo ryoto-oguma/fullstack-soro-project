@@ -17,9 +17,10 @@ function Calendar() {
 
 const Frame = styled.div`
   border: 2px solid #000000;
-  width: min(95vw, 95vh * 0.75);
-  height: min(95vh, 95vw / 0.75);
+  width: min(98vw, 98vh * 0.75);
+  height: min(98vh, 98vw / 0.75);
   overflow: hidden;
+  background: ${(props) => props.theme.palette.background.main};
 `;
 
 export default Calendar;
