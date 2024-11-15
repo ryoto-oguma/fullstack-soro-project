@@ -4,6 +4,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EventTitle from "../../components/EventTitle/EventTitle";
 import ReadOnlyEventTime from "../../components/ReadOnlyEventTime/ReadOnlyEventTime";
 import ReadOnlyEventPlace from "../../components/ReadOnlyEventPlace/ReadOnlyEventPlace";
+import ReadOnlyEventDetail from "../../components/ReadOnlyEventDetail/ReadOnlyEventDetail";
 
 function EventDetail() {
   return (
@@ -24,7 +25,9 @@ function EventDetail() {
           <Place>
             <ReadOnlyEventPlace />
           </Place>
-          <Detail>池袋でジンギスカンを食べたい</Detail>
+          <Detail>
+            <ReadOnlyEventDetail />
+          </Detail>
         </EventDetails>
       </Frame>
     </>
@@ -69,6 +72,8 @@ const Place = styled.div`
   margin-top: 30px;
 `;
 
-const Detail = styled.div``;
+const Detail = styled.div`
+  margin-top: 10px;
+`;
 
 export default EventDetail;
