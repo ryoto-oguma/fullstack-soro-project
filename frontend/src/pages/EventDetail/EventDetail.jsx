@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EventTitle from "../../components/EventTitle/EventTitle";
 import ReadOnlyEventTime from "../../components/ReadOnlyEventTime/ReadOnlyEventTime";
+import ReadOnlyEventPlace from "../../components/ReadOnlyEventPlace/ReadOnlyEventPlace";
 
 function EventDetail() {
   return (
@@ -20,7 +21,9 @@ function EventDetail() {
               <ReadOnlyEventTime />
             </EndTime>
           </TimeInfo>
-          <Place>池袋</Place>
+          <Place>
+            <ReadOnlyEventPlace />
+          </Place>
           <Detail>池袋でジンギスカンを食べたい</Detail>
         </EventDetails>
       </Frame>
