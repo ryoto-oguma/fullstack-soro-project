@@ -9,11 +9,10 @@ function EventTitle() {
   );
 }
 
-const Title = styled.div`
+const Title = styled.h1`
   color: ${(props) => props.theme.palette.primary.main};
   font-family: ${(props) => props.theme.typography.fontFamily};
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 20px;
 `;
 
 export default EventTitle;
