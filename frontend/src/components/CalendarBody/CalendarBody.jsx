@@ -73,6 +73,11 @@ const Frame = styled.div`
   .fc-toolbar-title {
     color: ${(props) => props.theme.palette.primary.main};
   }
+
+  .fc .fc-button-primary {
+    background-color: ${(props) => props.theme.palette.primary.main};
+    border-color: ${(props) => props.theme.palette.primary.main};
+  }
 `;
 
 export default CalendarBody;
