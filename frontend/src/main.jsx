@@ -1,7 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useParams,
+} from "react-router-dom";
 import {
   createTheme,
   ThemeProvider as MaterialThemeProvider,
@@ -34,6 +38,30 @@ const theme = createTheme({
   },
 });
 
+// 後々Backendから取得する
+const eventList = [
+  {
+    eventId: "1",
+    title: "池袋でlunch",
+    place: "池袋",
+    start: "2024-11-14 09:00",
+    end: "2024-11-16 14:00",
+    detail: "池袋でお昼にジンギスカンを食べませんか?",
+    requests: [],
+    eventOwner: "oguma",
+  },
+  {
+    eventId: "2",
+    title: "新宿でlunch",
+    place: "新宿",
+    start: "2024-11-14 09:00",
+    end: "2024-11-15 14:00",
+    detail: "新宿でお昼にサムギョプサルを食べませんか?",
+    requests: [],
+    eventOwner: "oguma",
+  },
+];
+
 const router = createBrowserRouter([
   {
     path: "not_available",
@@ -41,11 +69,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/calendar",
-    element: <Calendar />,
+    element: <Calendar eventList={eventList} />,
   },
   {
-    path: "/event",
-    element: <EventDetail />,
+    path: "/event/:eventId",
+    element: <EventDetail eventList={eventList} />,
   },
 ]);
 

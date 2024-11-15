@@ -4,14 +4,14 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 
-function ReadOnlyEventPlace() {
+function ReadOnlyEventPlace({ eventPlace } = props) {
   return (
     <>
       <Box component="form" noValidate autoComplete="off">
         <Label>Place</Label>
         <TextField
           fullWidth
-          value="池袋"
+          value={eventPlace}
           slotProps={{ readonly: true, textField: { size: "small" } }}
         />
       </Box>

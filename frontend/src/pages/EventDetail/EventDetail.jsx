@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EventTitle from "../../components/EventTitle/EventTitle";
@@ -7,27 +8,30 @@ import ReadOnlyEventPlace from "../../components/ReadOnlyEventPlace/ReadOnlyEven
 import ReadOnlyEventDetail from "../../components/ReadOnlyEventDetail/ReadOnlyEventDetail";
 import RequestButton from "../../components/RequestButton/RequestButton";
 
-function EventDetail() {
+function EventDetail({ eventList } = props) {
+  const { eventId } = useParams();
+  const event = eventList.filter((item) => item.eventId === eventId)[0];
+  console.log(event);
   return (
     <>
       <Frame>
         <Header />
         <EventDetails>
-          <EventTitle />
+          <EventTitle eventTitle={event.title} />
           <TimeInfo>
             <StartTime>
-              <ReadOnlyEventTime />
+              <ReadOnlyEventTime type="Start" eventTime={event.start} />
             </StartTime>
             <ArrowIcon />
             <EndTime>
-              <ReadOnlyEventTime />
+              <ReadOnlyEventTime type="End" eventTime={event.end} />
             </EndTime>
           </TimeInfo>
           <Place>
-            <ReadOnlyEventPlace />
+            <ReadOnlyEventPlace eventPlace={event.place} />
           </Place>
           <Detail>
-            <ReadOnlyEventDetail />
+            <ReadOnlyEventDetail eventDetail={event.detail} />
           </Detail>
           <Request>
             <RequestButton />

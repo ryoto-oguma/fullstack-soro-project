@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Header from "../../components/Header/Header";
 import CalendarBody from "../../components/CalendarBody/CalendarBody";
 
-function Calendar() {
+function Calendar({ eventList } = props) {
   return (
     <>
       <Frame>
         <Header />
-        <CalendarBody />
+        <CalendarBody eventList={eventList} />
       </Frame>
     </>
   );

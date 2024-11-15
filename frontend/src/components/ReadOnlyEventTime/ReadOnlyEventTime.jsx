@@ -6,13 +6,13 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
-function EventTime() {
+function EventTime({ type, eventTime } = pros) {
   return (
     <>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DateTimePicker
-          label="Start"
-          value={dayjs("2024-11-15 17:30")}
+          label={type}
+          value={dayjs(eventTime)}
           format="YYYY/MM/DD HH:mm"
           ampm={false}
           slotProps={{ textField: { size: "small" } }}

@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
 
-function EventTitle() {
+function EventTitle({ eventTitle } = props) {
+  console.log(eventTitle);
   return (
     <>
-      <Title>池袋で昼ごはん</Title>
+      <Title>{eventTitle}</Title>
     </>
   );
 }
