@@ -5,6 +5,7 @@ import EventTitle from "../../components/EventTitle/EventTitle";
 import ReadOnlyEventTime from "../../components/ReadOnlyEventTime/ReadOnlyEventTime";
 import ReadOnlyEventPlace from "../../components/ReadOnlyEventPlace/ReadOnlyEventPlace";
 import ReadOnlyEventDetail from "../../components/ReadOnlyEventDetail/ReadOnlyEventDetail";
+import RequestButton from "../../components/RequestButton/RequestButton";
 
 function EventDetail() {
   return (
@@ -28,6 +29,9 @@ function EventDetail() {
           <Detail>
             <ReadOnlyEventDetail />
           </Detail>
+          <Request>
+            <RequestButton />
+          </Request>
         </EventDetails>
       </Frame>
     </>
@@ -73,6 +77,10 @@ const Place = styled.div`
 `;
 
 const Detail = styled.div`
+  margin-top: 10px;
+`;
+
+const Request = styled.div`
   margin-top: 10px;
 `;
 
