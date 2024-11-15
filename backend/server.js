@@ -4,6 +4,6 @@ const app = express();
 
 const healthCheckRoutes = require("./routes/healthCheckRoutes");
 
-app.use("/", healthCheckRoutes);
+app.use("/api/health", healthCheckRoutes);
 
 module.exports = app;

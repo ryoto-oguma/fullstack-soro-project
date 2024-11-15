@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe("Health Check", () => {
   it("xxx", async () => {
-    const res = await chai.request(app).get("/");
+    const res = await chai.request(app).get("/api/health");
     expect(res).have.status(200);
     expect(res.text).to.equal("ok");
   });
