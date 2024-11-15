@@ -61,6 +61,10 @@ const Frame = styled.div`
     background-color: ${(props) => props.theme.palette.primary.main};
     border-color: ${(props) => props.theme.palette.primary.main};
   }
+
+  .fc-h-event {
+    cursor: pointer;
+  }
 `;
 
 export default CalendarBody;
