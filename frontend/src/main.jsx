@@ -1,13 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Calendar from "./pages/Calendar/Calendar.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   createTheme,
   ThemeProvider as MaterialThemeProvider,
 } from "@mui/material/styles";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import Calendar from "./pages/Calendar/Calendar.jsx";
+import EventDetail from "./pages/EventDetail/EventDetail.jsx";
 
 const theme = createTheme({
   typography: {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/calendar",
     element: <Calendar />,
+  },
+  {
+    path: "/event",
+    element: <EventDetail />,
   },
 ]);
 
